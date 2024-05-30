@@ -168,7 +168,6 @@ body {
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
-  height: 500px;
   border-radius: 3px;
   box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.5);
 }
@@ -177,7 +176,7 @@ body {
   width: 50%;
 }
 
-.btn:visited, .btn:link, .btn:active {
+.btn, .btn:visited, .btn:link, .btn:active {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -186,6 +185,7 @@ body {
   font-weight: 700;
   transition: all 0.2s;
   position: relative;
+  border: none;
 }
 .btn--white:link, .btn--white:visited, .btn:active {
   background-color: #fff;
@@ -194,18 +194,19 @@ body {
 .btn--white:link::after, .btn--white:visited::after, .btn:active::after {
   background-color: #fff;
 }
-.btn--green:link, .btn--green:visited, .btn:active {
+.btn, .btn--green:link, .btn--green:visited, .btn:active {
   background-color: #55c57a;
   color: #fff;
 }
-.btn--green:link::after, .btn--green:visited::after, .btn:active::after {
+.btn::after, .btn--green:link::after, .btn--green:visited::after, .btn:active::after {
   background-color: #55c57a;
 }
-.btn:hover {
+.btn:hover .btn:focus {
+  outline: none;
   transform: translateY(-0.3rem);
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-.btn:hover::after {
+.btn:hover .btn:focus::after {
   transform: scale(1.5);
   opacity: 0;
 }
@@ -466,6 +467,7 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block;
+  margin-bottom: 3rem;
 }
 .form__radio-input {
   display: none;
