@@ -6,6 +6,32 @@
   height: 100vh;
   background-color: rgba($blackColor, 0.9);
   z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  &__close {
+    color: $blackColor;
+    text-decoration: none;
+    font-size: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
 
   &__content {
     width: 75%;
@@ -13,10 +39,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    transition: all 0.4s;
   }
 
   &__left {

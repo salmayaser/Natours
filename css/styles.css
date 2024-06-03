@@ -577,6 +577,29 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.popup__close {
+  color: #000;
+  text-decoration: none;
+  font-size: 4rem;
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  transition: all 0.3s;
+}
+.popup__close:hover {
+  color: #55c57a;
 }
 .popup__content {
   width: 75%;
@@ -584,10 +607,12 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
   border-radius: 3px;
   display: table;
   overflow: hidden;
+  transition: all 0.4s;
 }
 .popup__left {
   width: 33.333333%;
