@@ -6,6 +6,20 @@
 
 html {
   font-size: 62.5%;
+  @include respond(md) {
+    font-size: 56.25%;
+    background-color: blue;
+  }
+  @include respond(sm) {
+    font-size: 60%;
+  }
+
+  @include respond(xs) {
+    font-size: 50%;
+  }
+  @include respond(lg) {
+    font-size: 75%;
+  }
 }
 
 body {
