@@ -8,7 +8,6 @@ html {
   font-size: 62.5%;
   @include respond(md) {
     font-size: 56.25%;
-    background-color: blue;
   }
   @include respond(sm) {
     font-size: 60%;
