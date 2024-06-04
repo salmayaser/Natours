@@ -7,10 +7,10 @@
 html {
   font-size: 62.5%;
   @include respond(md) {
-    font-size: 56.25%;
+    font-size: 60%;
   }
   @include respond(sm) {
-    font-size: 60%;
+    font-size: 56.25%;
   }
 
   @include respond(xs) {
