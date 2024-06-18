@@ -10,8 +10,14 @@
 
   [class^="col-"] {
     float: left;
+    @include respond(md) {
+      width: 100% !important;
+    }
     &:not(:last-child) {
       margin-right: $gutter_horizontal;
+      @include respond(md) {
+        margin-right: 0;
+      }
     }
   }
 
