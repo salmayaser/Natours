@@ -4,7 +4,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: $darkGreyColor;
-  padding: 3rem;
 }
 
 .primary-heading {
@@ -19,6 +18,10 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: fadeFromRight 0.5s linear;
+    @include respond(sm) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &--sub {
     display: block;
@@ -26,6 +29,9 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: fadeFromLeft 0.5s linear;
+    @include respond(sm) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -44,6 +50,12 @@ body {
   display: inline-block;
   transition: all 0.2s;
   letter-spacing: 2px;
+  @include respond(md) {
+    font-size: 3rem;
+  }
+  @include respond(sm) {
+    font-size: 2rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
