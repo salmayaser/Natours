@@ -11,6 +11,7 @@
       width: calc(100% / 3);
       float: left;
       position: relative;
+      outline-offset: 0.5rem;
     }
     &--p1 {
       left: 0;
@@ -44,6 +45,9 @@
       outline: 1.5rem solid $primaryColor;
       box-shadow: 0 2.5rem 4rem rgba($blackColor, 0.5);
       z-index: 2;
+      @include respond(md) {
+        outline: 0.5rem solid $primaryColor;
+      }
     }
   }
   &:hover &__image:not(:hover) {

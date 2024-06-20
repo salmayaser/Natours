@@ -6,17 +6,26 @@
   border-radius: 3px;
   box-shadow: 0rem 1.5rem 1rem rgba($blackColor, 0.2);
   transition: all 0.3s;
+  @include respond(md) {
+    padding: 2rem;
+  }
 
   &__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
     color: transparent;
+    display: inline-block;
     background-image: linear-gradient(
       to bottom,
       $primaryColorLight,
       $primaryColorDark
     );
     background-clip: text;
+
+    @include respond(md) {
+      margin-bottom: 0.3rem;
+      font-size: 4rem;
+    }
   }
 
   &:hover {
