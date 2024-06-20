@@ -33,6 +33,15 @@
     border-radius: 50%;
     position: fixed;
     cursor: pointer;
+
+    @include respond(md) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond(sm) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__icon {
@@ -81,6 +90,14 @@
     z-index: 2;
     display: inline-block;
     transition: all 0.3s;
+    @include respond(md) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond(sm) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__nav {

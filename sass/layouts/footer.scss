@@ -3,6 +3,11 @@
   padding: 10rem 0;
   color: $grey_color_light_1;
   font-size: 1.6rem;
+  text-align: center;
+
+  @include respond(md) {
+    padding: 8rem 0;
+  }
 
   &__logo-box {
     text-align: center;

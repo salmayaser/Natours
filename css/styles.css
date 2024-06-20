@@ -55,7 +55,7 @@ html {
 }
 @media (max-width: 37.5em) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 @media (min-width: 112.5em) {
@@ -703,6 +703,11 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
+@media (max-width: 56.25em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+}
 .header__img-box {
   position: absolute;
   top: 0;
@@ -726,8 +731,23 @@ body {
   max-width: 114rem;
   margin: 0 auto;
 }
+@media (max-width: 75em) {
+  .row {
+    max-width: 50rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row {
+    padding: 0 2rem;
+  }
+}
 .row:not(:last-child) {
   margin-bottom: 8rem;
+}
+@media (max-width: 75em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
 }
 .row::after {
   content: "";
@@ -740,6 +760,7 @@ body {
 @media (max-width: 75em) {
   .row [class^=col-] {
     width: 100% !important;
+    margin-bottom: 6rem;
   }
 }
 .row [class^=col-]:not(:last-child) {
@@ -774,6 +795,12 @@ body {
   padding: 10rem 0;
   color: rgba(247, 247, 247, 0.968627451);
   font-size: 1.6rem;
+  text-align: center;
+}
+@media (max-width: 75em) {
+  .footer {
+    padding: 8rem 0;
+  }
 }
 .footer__logo-box {
   text-align: center;
@@ -850,6 +877,18 @@ body {
   position: fixed;
   cursor: pointer;
 }
+@media (max-width: 75em) {
+  .navigation__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
 .navigation__icon {
   display: inline-block;
   top: 50%;
@@ -890,6 +929,18 @@ body {
   z-index: 2;
   display: inline-block;
   transition: all 0.3s;
+}
+@media (max-width: 75em) {
+  .navigation__background {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 3rem;
+    right: 3rem;
+  }
 }
 .navigation__nav {
   width: 100%;

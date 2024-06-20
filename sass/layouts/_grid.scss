@@ -2,8 +2,17 @@
   max-width: $grid_width;
   margin: 0 auto;
 
+  @include respond(md) {
+    max-width: 50rem;
+  }
+  @include respond(sm) {
+    padding: 0 2rem;
+  }
   &:not(:last-child) {
     margin-bottom: $gutter_vertical;
+    @include respond(md) {
+      margin-bottom: $gutter_vertical-sm;
+    }
   }
 
   @include clearFix;
@@ -12,6 +21,7 @@
     float: left;
     @include respond(md) {
       width: 100% !important;
+      margin-bottom: $gutter_vertical-sm;
     }
     &:not(:last-child) {
       margin-right: $gutter_horizontal;

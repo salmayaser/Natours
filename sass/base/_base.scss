@@ -14,7 +14,7 @@ html {
   }
 
   @include respond(xs) {
-    font-size: 50%;
+    font-size: 40%;
   }
   @include respond(lg) {
     font-size: 75%;
