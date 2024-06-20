@@ -3,15 +3,28 @@
 }
 .mb-lg {
   margin-bottom: 8rem;
+  @include respond(md) {
+    margin-bottom: 6rem;
+  }
 }
 .mt-lg {
   margin-top: 8rem;
+  @include respond(md) {
+    margin-top: 6rem;
+  }
 }
 .mt-xl {
   margin-top: 10rem;
+
+  @include respond(md) {
+    margin-top: 8rem;
+  }
 }
 .mb-m {
   margin-bottom: 4rem;
+  @include respond(md) {
+    margin-bottom: 3rem;
+  }
 }
 .mt-m {
   margin-top: 4rem;
