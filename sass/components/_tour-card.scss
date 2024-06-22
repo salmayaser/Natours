@@ -161,3 +161,59 @@
     text-transform: uppercase;
   }
 }
+
+@include respond(md) {
+  .tours-card {
+    height: auto;
+    background-color: $whiteColor;
+
+    &__side {
+      height: auto;
+      position: relative;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    &__image {
+      height: 23rem;
+    }
+
+    &__details {
+      padding: 3rem;
+      ul {
+        list-style-type: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+        li {
+          padding: 1rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid $grey_color_light_2;
+          }
+        }
+      }
+    }
+  }
+  .cta-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(-0, 0);
+    padding: 7rem 4rem 4rem 4rem;
+
+    &__price {
+      margin-bottom: 3rem;
+    }
+  }
+}
