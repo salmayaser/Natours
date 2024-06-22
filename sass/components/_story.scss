@@ -9,8 +9,18 @@
   font-size: 1.9rem;
   transform: skew(-7deg);
 
+  @include respond(md) {
+    width: 100%;
+    transform: skew(0deg);
+    padding: 4rem;
+    padding-left: 5rem;
+  }
+
   & > * {
     transform: skew(7deg);
+    @include respond(md) {
+      transform: skew(0deg);
+    }
   }
 
   &__shape {
@@ -21,6 +31,9 @@
     clip-path: circle(50%);
     transform: translateX(-3rem) skew(7deg);
     position: relative;
+    @include respond(md) {
+      transform: translateX(-3rem) skew(0deg);
+    }
   }
 
   &__caption {

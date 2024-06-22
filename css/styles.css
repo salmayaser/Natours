@@ -714,8 +714,21 @@ body {
   font-size: 1.9rem;
   transform: skew(-7deg);
 }
+@media (max-width: 75em) {
+  .story {
+    width: 100%;
+    transform: skew(0deg);
+    padding: 4rem;
+    padding-left: 5rem;
+  }
+}
 .story > * {
   transform: skew(7deg);
+}
+@media (max-width: 75em) {
+  .story > * {
+    transform: skew(0deg);
+  }
 }
 .story__shape {
   width: 15rem;
@@ -725,6 +738,11 @@ body {
   clip-path: circle(50%);
   transform: translateX(-3rem) skew(7deg);
   position: relative;
+}
+@media (max-width: 75em) {
+  .story__shape {
+    transform: translateX(-3rem) skew(0deg);
+  }
 }
 .story__caption {
   color: #fff;
