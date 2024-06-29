@@ -12,7 +12,8 @@
   position: relative;
 
   // high res screens and large screen
-  @media (min-resolution: 192dpi) and (min-width: 700px), (min-width: 2000px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 700px),
+    only screen and(min-width: 2000px) {
     background-image: linear-gradient(
         to right bottom,
         rgba($primaryColorLight, 0.8),
