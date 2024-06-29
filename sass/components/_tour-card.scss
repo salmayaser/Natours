@@ -163,7 +163,7 @@
   }
 }
 
-@include respond(md) {
+@media only screen and (max-width: 75em), only screen and (hover: none) {
   .tours-card {
     height: auto;
     background-color: $whiteColor;
