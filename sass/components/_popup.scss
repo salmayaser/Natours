@@ -57,6 +57,11 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(md) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__right {
@@ -64,10 +69,20 @@
     display: table-cell;
     vertical-align: middle;
     padding: 5rem;
+
+    @include respond(md) {
+      width: 100%;
+      display: block;
+    }
   }
   &__img {
     width: 100%;
     display: block;
+
+    @include respond(md) {
+      width: 50%;
+      display: inline-block;
+    }
   }
   &__text {
     font-size: 1.4rem;
@@ -78,5 +93,9 @@
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
+    @include respond(md) {
+      column-count: 1;
+    }
   }
 }
